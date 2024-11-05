@@ -1,17 +1,17 @@
 
 
-export default function Card(){
+export default function Card(props){
     return(
         <div className = "card">
-            <img src="/images/Katie-Zaferes.jpeg" className="card--image"></img>
+            <img src={props.imgSrc} className="card--image"></img>
             <div className="card--stats">
-                <img src="/images/star.png" className="card--star"></img>
-                <span>5.0</span> 
-                <span className="grey">(6) ·</span> 
-                <span className="grey">USA</span> 
+                <img src={props.starIcon}className="card--star"></img>
+                <span>{props.rating}</span> 
+                <span className="grey">{props.reviews} ·</span> 
+                <span className="grey">{props.location}</span> 
             </div>
-            <p>Life Lessons with Katie Zaferes</p>
-            <p>From $136</p>
+            <p>{props.title}</p>
+            <p>{props.price}</p>
         </div>
     );
 }
