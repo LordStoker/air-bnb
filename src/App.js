@@ -4,16 +4,15 @@ import Card from './components/Card.jsx';
 import "./styles.css";
 import data from "./data/data.js";
 
-
-
-
 export default function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Hero></Hero>
+      <Navbar/>
+      <Hero/>
+      <section className="cards-list">
       {data.map(item => (
           <Card
+          key={item.id}
             imgSrc={"/images/" + item.coverImg}
             rating={item.stats.rating} 
             reviews={item.stats.reviewCount} 
@@ -22,9 +21,8 @@ export default function App() {
             title={item.title} 
             price={"From $" + item.price}      
           />
-          
-        
       ))}
+      </section>
      
 
     </>
