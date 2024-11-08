@@ -2,7 +2,7 @@
 
 export default function Card(props){
     return(
-        <div className = "card">
+        <div className = "card" key={props.key}>
             <img src={props.imgSrc} className="card--image"></img>
             <div className="card--stats">
                 <img src={props.starIcon}className="card--star"></img>

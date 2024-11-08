@@ -11,8 +11,9 @@ export default function App() {
       <Hero/>
       <section className="cards-list">
       {data.map(item => (
+        <div key={item.id}>
           <Card
-          key={item.id}
+            
             imgSrc={"/images/" + item.coverImg}
             rating={item.stats.rating} 
             reviews={item.stats.reviewCount} 
@@ -21,10 +22,9 @@ export default function App() {
             title={item.title} 
             price={"From $" + item.price}      
           />
+          </div>
       ))}
       </section>
-     
-
     </>
   );
   
