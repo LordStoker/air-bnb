@@ -2,6 +2,9 @@ import Hero from './components/Hero.jsx';
 import Navbar from './components/Navbar.jsx';
 import Card from './components/Card.jsx';
 import "./styles.css";
+import data from "./data/data.js";
+
+
 
 
 export default function App() {
@@ -9,16 +12,21 @@ export default function App() {
     <>
       <Navbar></Navbar>
       <Hero></Hero>
-      <Card 
-        imgSrc="/images/Katie-Zaferes.jpeg" 
-        rating="5.0" 
-        reviews="(6)·" 
-        location="USA"
-        starIcon="/images/star.png" 
-        title="Life Lessons with Katie Zaferes" 
-        price="From $136"      
-      >
-      </Card>
+      {data.map(item => (
+          <Card
+            imgSrc={"/images/" + item.coverImg}
+            rating={item.stats.rating} 
+            reviews={item.stats.reviewCount} 
+            location={item.location}
+            starIcon="/images/star.png" 
+            title={item.title} 
+            price={"From $" + item.price}      
+          />
+          
+        
+      ))}
+     
+
     </>
   );
 }
