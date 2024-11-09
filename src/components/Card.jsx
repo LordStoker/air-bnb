@@ -3,7 +3,7 @@
 export default function Card(props){    
     return(
         <div className = "card" key={props.key}>
-            {props.openSpots == 0 && <div className ="card--badge">SOLD OUT</div>}
+            {props.openSpots === 0 && <div className ="card--badge">SOLD OUT</div>}
             <img src={props.imgSrc} className="card--image"></img>
             <div className="card--stats">
                 <img src={props.starIcon}className="card--star"></img>
