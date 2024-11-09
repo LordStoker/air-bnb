@@ -53,6 +53,7 @@ section {
     flex-wrap: nowrap;
     gap: 20px;
     overflow-x: auto;
+    
 }
 
 .card {

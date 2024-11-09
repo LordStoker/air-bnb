@@ -14,7 +14,7 @@ export default function Card(props){
     return(
         <div className = "card" key={props.item.key}>
             {badgeText != null &&<div className ="card--badge">{badgeText}</div>}
-            <img src={"images/" + props.item.coverImg} className="card--image" alt = {"images/" +props.item.coverImg}></img>
+            <img src={"images/" + props.item.coverImg} className="card--image" alt = {"images/" + props.item.coverImg}></img>
             <div className="card--stats">
                 <img src="images/star.png" className="card--star" alt = "images/star.png"></img>
                 <span>{props.item.stats.rating}</span> 
