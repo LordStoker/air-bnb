@@ -20,7 +20,8 @@ export default function App() {
             location={item.location}
             starIcon="/images/star.png" 
             title={item.title} 
-            price={"From $" + item.price}      
+            price={"From $" + item.price}  
+            openSpots={item.openSpots}    
           />
           </div>
       ))}
