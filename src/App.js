@@ -12,16 +12,8 @@ export default function App() {
       <section className="cards-list">
       {data.map(item => (
         <div key={item.id}>
-          <Card
-            
-            imgSrc={"/images/" + item.coverImg}
-            rating={item.stats.rating} 
-            reviews={item.stats.reviewCount} 
-            location={item.location}
-            starIcon="/images/star.png" 
-            title={item.title} 
-            price={"From $" + item.price}  
-            openSpots={item.openSpots}    
+          <Card            
+            item={item}
           />
           </div>
       ))}
